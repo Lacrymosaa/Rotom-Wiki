@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotom Wiki</title>
+  <link rel="icon" type="image/x-icon" href="img/rotomwiki.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-title">Rotom Wiki</div>
+    <img src="img/INCINEROAR.png" class="pokemon-sprite" alt="Incinerorar">
+    <img src="img/MIMIKYU.png" class="pokemon-sprite" alt="Mimikyu">
+    <img src="img/ARCHALUDON.png" class="pokemon-sprite" alt="Archaludon">
+    <img src="img/RAYQUAZA.png" class="pokemon-sprite" alt="Rayquaza">
+    <img src="img/LILLIGANT.png" class="pokemon-sprite" alt="Lilligant">
+    <img src="img/SCEPTILE.png" class="pokemon-sprite" alt="Sceptile">
+    <img src="img/SHARPEDO.png" class="pokemon-sprite" alt="Sharpedo">
+    <img src="img/SHINX.png" class="pokemon-sprite" alt="Shinx">
+    <img src="img/PIKACHU.png" class="pokemon-sprite" alt="Pikachu">
+    <img src="img/SILVALLY.png" class="pokemon-sprite" alt="SIlvally">
+    <button id="reset-btn" class="reset-btn" title="Resetar página">Reset</button>
+  </nav>
+  <div class="container">
+    <aside class="sidebar">
+      <ul id="topics">
+        <li data-topic="localization" class="active">Localization</li>
+        <li data-topic="description">Description</li>
+        <li data-topic="encounters">Encounters</li>
+        <li data-topic="trainers">Trainers</li>
+        <li data-topic="story">Story</li>
+        <li data-topic="items">Items</li>
+        <li data-topic="gimmighoul">Gimmighoul</li>
+        <li data-topic="quests">Quests</li>
+        <li data-topic="achievements">Achievements</li>
+      </ul>
+    </aside>
+    <div class="content">
+      <div class="form-area">
+        <section id="localization" class="topic active">
+          <h2>Localization</h2>
+          <div class="form">
+            <label>Location Name:<input type="text" id="loc-name"></label>
+            <label>North Connection:<input type="text" id="loc-north"></label>
+            <label>South Connection:<input type="text" id="loc-south"></label>
+            <label>East Connection:<input type="text" id="loc-east"></label>
+            <label>West Connection:<input type="text" id="loc-west"></label>
+          </div>
+        </section>
+        <section id="description" class="topic">
+          <h2>Description</h2><textarea id="desc-text" placeholder="Enter description..."></textarea>
+        </section>
+        <section id="encounters" class="topic">
+          <h2>Encounters</h2>
+          <div class="enc-type">
+            <span>Encounter location:</span>
+
+            <label class="enc-radio">
+              <input type="radio" name="land-type" value="Grass" id="land-grass" checked>
+              Grass
+            </label>
+
+            <label class="enc-radio">
+              <input type="radio" name="land-type" value="Honey" id="land-honey">
+              Honey
+            </label>
+
+            <label class="enc-radio">
+              <input type="radio" name="land-type" value="Cave" id="land-cave">
+              Cave
+            </label>
+          </div>
+          <textarea id="enc-text" placeholder="Here is an example of how the content should look:
+Land,6
+    10,KANGASKHAN,55,58
+    10,PIDGEOT,55,58
+    10,SUNFLORA,55,58
+    10,HERACROSS,55,58
+    10,TINKATON,55,58
+    10,LILLIGANT,55,58
+    10,FLORGES,55,58
+    10,BEWEAR,55,58
+    5,ESPATHRA,55,58
+    5,APPLIN,55,58
+    5,CHARMELEON,35,40
+    5,IVYSAUR,35,40
+OldRod
+    50,JELLICENT,55,58
+    25,AZUMARILL,55,58
+    25,SEAKING,55,58
+GoodRod
+    20,BASCULIN,55,58
+    45,AZUMARILL,55,58
+    25,CRAWDAUNT,55,58
+SuperRod
+    30,WARTORTLE,35,40
+    70,VELUZA,55,58
+"></textarea>
+        </section>
+        <section id="trainers" class="topic">
+          <h2>Trainers</h2><textarea id="trn-text" placeholder="Here is an example of how the content should look:
+Youngster|Zuelo|Seedot:4|Lotad:4:Oran Berry
+Lass|Sonia|Starly:4|Azurill:4
+
+Being: Class|Name|Pokémon1:Level:Item|Pokémon2:Level:Item
+"></textarea>
+        </section>
+        <section id="story" class="topic">
+          <h2>Story</h2><textarea id="story-text" placeholder='Copy a battle from trainers.txt like this:
+[COMANDANTE_Vesta,Vesta,3]
+Items = HYPERPOTION
+LoseText = "¿Otra vez? ¡No es posible!"
+Pokemon = SALAZZLE,40
+    Gender = female
+    Moves = FLAMETHROWER,TOXIC,VENOSHOCK,HEATWAVE
+    Item = SITRUSBERRY
+    IV = 20,20,20,20,20,20
+Pokemon = CROBAT,38
+    Gender = female
+    Moves = POISONFANG,LEECHLIFE,SUPERSONIC,WINGATTACK
+    Item = EXPERTBELT
+    IV = 20,20,20,20,20,20
+'></textarea>
+        </section>
+        <section id="items" class="topic">
+          <h2>Items</h2><textarea id="item-text" placeholder="Here is an example of how the content should look:
+Item|Item Location Description
+Item|Item Location Description
+"></textarea>
+        </section>
+        <section id="gimmighoul" class="topic">
+          <h2>Gimmighoul</h2><textarea id="gimm-text" placeholder="Enter Gimmighoul location info..."></textarea>
+        </section>
+        <section id="quests" class="topic">
+          <h2>Quests</h2><textarea id="quest-text" placeholder="Enter quests..."></textarea>
+        </section>
+        <section id="achievements" class="topic">
+          <h2>Achievements</h2><textarea id="ach-text" placeholder="Here is an example of how the content should look:
+Strange People|This achievement can be obtained by agreeing to help Rodolfo find his Ditto. The Ditto can be found in the north of the town by interacting with a Rock Smash rock.
+Hidden Treasure|Solve the puzzle in the ancient ruins to uncover the hidden treasure.
+"></textarea>
+        </section>
+      </div>
+      <div class="code-area">
+        <h3>Generated Code</h3>
+        <button class="copy-btn" id="copy-btn">Copy</button>
+        <pre id="code-output"></pre>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
