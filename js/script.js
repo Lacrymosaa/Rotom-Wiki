@@ -369,7 +369,7 @@ function codeStory() {
 
 function codeItems() {
   const locationName = document.getElementById('loc-name').value.trim() || 'null';
-  const items = document.getElementById('item-text').value.trim(); if (!items) return `\n\n==Items==\nThere are no items available at ${locationName}.`;
+  const items = document.getElementById('item-text').value.trim(); if (!items) return `\n\n==Items==\nThere are no items available on ${locationName}.`;
 
   const lines = items.split('\n').map(l => l.trim()).filter(Boolean);
 
